@@ -1,0 +1,49 @@
+// Make list of favorite movies
+// Take out all movies with the word "the" in them and add to favorite movie list
+
+var movieName = [];
+var favoriteMovies = [];
+
+function addFavoriteMovie(movieName) {
+
+  if (!movieName.includes("The")) {
+    favoriteMovies.push(movieName);
+  }
+
+}
+
+function printFavoriteMovies() {
+  
+  if (favoriteMovies.length == 1) {
+    console.log("There is " + favoriteMovies.length + " movies in the favorite movies list.");
+  } else {
+    console.log("There are " + favoriteMovies.length + " movies in the favorite movies list.");
+  }
+
+  // Below are other ways to do the printing of favorite movies
+
+    // var i = 0 // variable that starts at zero ( want to start loop at first item in the list)
+    // while(i < favoriteMovies.length) {
+    //     console.log(favoriteMovies[i]);
+    //     i++; // zero start point becomes zero plus one
+    // }
+
+    // for (var j = 0; j < faoriteMovies.length; j++) {
+    //   console.log(favoriteMovies[i]);
+    // }
+    //console.log(addFavoriteMovie());
+
+  for (var movie of favoriteMovies) {
+    console.log(movie);
+  }
+}
+
+// Just a list of random movies to test if it is bumping in only movies without "the"
+addFavoriteMovie("The Matrix");
+addFavoriteMovie("The Lion King");
+addFavoriteMovie("Superman");
+addFavoriteMovie("Batman");
+addFavoriteMovie("The Big Short");
+
+// Call function
+console.log(printFavoriteMovies());
