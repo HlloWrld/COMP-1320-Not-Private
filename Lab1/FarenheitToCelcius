@@ -1,0 +1,23 @@
+// Converts temperature from F to C
+
+// Requesting to use readline sync to ask quetsions to user
+var readlineSync = require("readline-sync");
+var usertyped = readlineSync.question("Enter Fahrenheit Temp to conver to Celcius (ex: 90): ");
+
+// Convert Celcius to Farenheit
+function ctof(celsius) {
+  var ctemperature = celsius;
+  var ctofahr = ctemperature * 9 / 5 + 32;
+  var message = ctemperature + '\xB0C is ' + ctofahr + ' \xB0F.';
+}
+
+// Convert farhrenheit to celcius
+function fToC(fahrenheit) {
+  var ftemperature = fahrenheit;
+  var fToCel = (ftemperature - 32) * 5 / 9;
+  var message = ftemperature + '\xB0F is ' + fToCel + '\xB0C.';
+  return message;
+}
+
+// Calls command convert F to C, takes user input and prints out result of conversion 
+console.log(fToC(usertyped));
